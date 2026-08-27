@@ -80,7 +80,7 @@ Modernize the legacy Java 6/IE8 applet-based test suite into a dual-mode system:
 
 **Decisions**
 - Confirmed: Dual mode strategy (legacy archival + modern active lane).
-- Confirmed: Java target is JDK 21 LTS for modern lane.
+- Confirmed: Java target is OpenJDK 21 LTS for modern lane.
 - Confirmed: Browser support is evergreen current-2.
 - Confirmed: Keep Ant as primary build during initial migration.
 - Included in scope: architecture replacement of applet/frameset runtime, testing foundation, accessibility/security/compliance hardening.

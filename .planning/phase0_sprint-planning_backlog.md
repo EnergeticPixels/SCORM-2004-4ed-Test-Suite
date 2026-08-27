@@ -3,23 +3,26 @@
 Source plan: [plan_modernization_firstblush.md](plan_modernization_firstblush.md)
 
 ### Sprint Context
-- Sprint length: 2 weeks (10 working days)
+- Sprint length: 4 weeks (20 working days)
 - Goal: Lock modernization guardrails, acceptance criteria, and governance so Phase 1 execution can start with low ambiguity.
 - Capacity model: 6 core contributors, 1 part-time advisor
+- Sprint slicing convention for this file:
+1. Sprint 0A = Weeks 1-2 of the 4-week sprint
+1. Sprint 0B = Weeks 3-4 of the 4-week sprint
 - Estimation units:
 1. Story points (Fibonacci)
 1. Engineering effort hours (team total)
 
 ### Owners
-- Program Manager (PM): <owner_name>
-- Technical Lead (TL): <owner_name>
-- Java Lead (J-LD): <owner_name>
-- Web Lead (W-LD): <owner_name>
-- QA Lead (QA): <owner_name>
-- Accessibility Lead (A11Y): <owner_name>
-- Security Lead (SEC): <owner_name>
-- DevOps/Build Engineer (DEVOPS): <owner_name>
-- Product/Conformance SME (SME): <owner_name>
+- Program Manager (PM): Chrisjen Avasarala
+- Technical Lead (TL): Josephus Miller
+- Java Lead (J-LD): Naomi Nagata
+- Web Lead (W-LD): Alex Kamal
+- QA Lead (QA): James Holden
+- Accessibility Lead (A11Y): Camina Drummer
+- Security Lead (SEC): Bobbie Draper
+- DevOps/Build Engineer (DEVOPS): Amos Burton
+- Product/Conformance SME (SME): Praxidike Meng
 
 ### Sprint Backlog
 | ID | Backlog Item | Deliverable | Owner | Dependencies | SP | Est. Hours |
@@ -43,8 +46,8 @@ Source plan: [plan_modernization_firstblush.md](plan_modernization_firstblush.md
 - Recommended sprint load target: 42-46 SP (leave 10-15% buffer for discovery)
 
 ### Suggested Sprint Slicing
-1. Sprint 0A (Week 1): P0-01, P0-02, P0-03, P0-05, P0-07, P0-08
-1. Sprint 0B (Week 2): P0-04, P0-06, P0-09, P0-10, P0-11, P0-12
+1. Sprint 0A (Weeks 1-2): P0-01, P0-02, P0-03, P0-05, P0-07, P0-08
+1. Sprint 0B (Weeks 3-4): P0-04, P0-06, P0-09, P0-10, P0-11, P0-12
 
 ### Definition of Done for Phase 0
 1. Acceptance criteria approved and versioned.
@@ -55,7 +58,7 @@ Source plan: [plan_modernization_firstblush.md](plan_modernization_firstblush.md
 1. Named owners finalized (no placeholders remain).
 
 ### Open Inputs Needed
-1. Replace all <owner_name> placeholders with named team members.
+1. Confirm this The Expanse role mapping is final for this project.
 1. Confirm actual team capacity per role to refine hour estimates.
 1. Confirm whether procurement/legal participates in sign-off for dependency policy.
 
