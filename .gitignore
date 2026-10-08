@@ -1,0 +1,23 @@
+# Local build output
+software_development/build/
+
+# Java signing material (do not commit)
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.jceks
+
+# Private key and certificate material (do not commit)
+*.key
+*.pem
+*.der
+*.cer
+*.crt
+
+# Local signing config overrides (do not commit)
+software_development/build.properties.local
+software_development/signing.properties
+software_development/signing.local.properties
+software_development/keystore.properties
+software_development/keystore.local.properties

@@ -7,7 +7,10 @@
     </target>
 
     <target name="compile" depends="init">
-        <javac srcdir="${src}" destdir="${buildDir}" includes="org/adl/util/debug/"/>
+        <javac srcdir="${src}" destdir="${buildDir}" includes="org/adl/util/debug/">
+            <!-- Temporary modern-JDK bridge for legacy internal package access during Phase 1 baseline work. -->
+            <compilerarg value="--add-exports=java.base/sun.security.action=ALL-UNNAMED"/>
+        </javac>
     </target>
 
     <target name="buildDebugJar" depends="compile">

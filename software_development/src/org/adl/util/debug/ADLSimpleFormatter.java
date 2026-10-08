@@ -22,8 +22,7 @@ public class ADLSimpleFormatter extends SimpleFormatter
    /**
     * A line separator used to separate messages sent to the log.
     */
-   private String mLineSeparator = (String)java.security.AccessController
-      .doPrivileged(new sun.security.action.GetPropertyAction("line.separator"));
+   private String mLineSeparator = System.getProperty("line.separator");
 
    /**
     * Overrides SimpleFormatter format function. Writes the output without
