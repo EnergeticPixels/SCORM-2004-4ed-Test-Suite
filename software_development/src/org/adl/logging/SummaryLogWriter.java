@@ -11,6 +11,7 @@ import java.util.List;
 
 import netscape.javascript.JSObject;
 
+import org.adl.util.JSObjectBridge;
 import org.adl.testsuite.util.AppletList;
 import org.adl.util.LogMessage;
 import org.adl.util.MessageType;
@@ -101,7 +102,7 @@ public class SummaryLogWriter implements Runnable
          mSummaryLogWriterThread = new Thread(this, getClass().getSimpleName());
          mSummaryLogWriterThread.start();
          Applet a = AppletList.getApplet("logInterface");
-         mJsroot = JSObject.getWindow(a);
+         mJsroot = JSObjectBridge.getWindow(a);
          formatter = new HTMLMessageFormatter();
          mLfg = iLfg;
       }

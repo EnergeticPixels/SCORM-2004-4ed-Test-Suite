@@ -7,6 +7,7 @@ import java.security.PrivilegedAction;
 import netscape.javascript.JSObject;
 
 import org.adl.util.Messages;
+import org.adl.util.JSObjectBridge;
 import org.adl.testsuite.util.AppletList;
 //import org.adl.testsuite.checksum.ADLPackageChecksum;
 
@@ -55,8 +56,11 @@ public class PackageChecksumDriver extends Applet
     */
    public void start()
    {
-      JSObject mJsroot = JSObject.getWindow(this);
-      mJsroot.eval("loadComplete()");
+      JSObject mJsroot = JSObjectBridge.getWindow(this);
+      if (mJsroot != null)
+      {
+         mJsroot.eval("loadComplete()");
+      }
    }
    
    /**

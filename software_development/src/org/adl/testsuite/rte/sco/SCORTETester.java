@@ -24,6 +24,7 @@ import org.adl.logging.SummaryLogWriter;
 import org.adl.logging.UIMessageProcessor;
 import org.adl.testsuite.util.AppletList;
 import org.adl.testsuite.util.TestSubjectData;
+import org.adl.util.JSObjectBridge;
 import org.adl.util.LogMessage;
 import org.adl.util.MessageCollection;
 import org.adl.util.MessageType;
@@ -365,8 +366,11 @@ public class SCORTETester implements Runnable
       String args[] = { mLaunchLine, errs };
       // Invoke the JavaScript call to launch the SCOs
       // mJsroot.call( "launchSCO", args ); 
-      final JSObject apiWindow = JSObject.getWindow(AppletList.getApplet("APIImplementation"));
-      apiWindow.call( "launchSCO", args );
+      final JSObject apiWindow = JSObjectBridge.getWindow(AppletList.getApplet("APIImplementation"));
+      if (apiWindow != null)
+      {
+         apiWindow.call( "launchSCO", args );
+      }
 
       // Determine the current time
       final Calendar cal = Calendar.getInstance();

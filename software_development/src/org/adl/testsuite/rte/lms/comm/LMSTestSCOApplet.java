@@ -4,6 +4,7 @@ import java.applet.Applet;
 import java.util.Date;
 
 import netscape.javascript.JSObject;
+import org.adl.util.JSObjectBridge;
 
 import org.adl.testsuite.rte.lms.interfaces.MessageManager;
 import org.adl.testsuite.rte.lms.util.Command;
@@ -85,7 +86,7 @@ public class LMSTestSCOApplet extends Applet
     */
    public void start()
    {
-      mJSO = JSObject.getWindow(this);
+      mJSO = JSObjectBridge.getWindow(this);
    }
 
    /**
@@ -128,7 +129,7 @@ public class LMSTestSCOApplet extends Applet
    {
       if (mJSO == null)
       {
-         mJSO = JSObject.getWindow(this);
+         mJSO = JSObjectBridge.getWindow(this);
       }
       mConnection.sendObject(new LMSMessageObject("evalID", unNull(iID)));
       final String returnedResult = (String)getResponse();
@@ -174,7 +175,6 @@ public class LMSTestSCOApplet extends Applet
       mConnection.sendObject(new LMSMessageObject("evalUIQ", unNull(iUIA)));
       return Boolean.valueOf((String)getResponse());
    }
-   
    /**
     * Writes the message to the indicated log.
     * 
@@ -213,7 +213,7 @@ public class LMSTestSCOApplet extends Applet
     */
    public boolean runCommands()
    {
-      final Results results = getCommands().evaluate(JSObject.getWindow(this));
+      final Results results = getCommands().evaluate(JSObjectBridge.getWindow(this));
       return evaluateResults(results);
    }
    

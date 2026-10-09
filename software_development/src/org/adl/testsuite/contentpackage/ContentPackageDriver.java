@@ -14,6 +14,7 @@ import java.util.logging.Logger;
 import netscape.javascript.JSObject;
 
 import org.adl.util.Messages;
+import org.adl.util.JSObjectBridge;
 import org.adl.logging.DetailedLogMessageCollection;
 import org.adl.logging.LoggingMessages;
 import org.adl.logging.SummaryLogMessageCollection;
@@ -185,7 +186,7 @@ public class ContentPackageDriver extends Applet
       {
          // loops until the applets load to make the continue button visiable
       }
-      JSObject mJsroot = JSObject.getWindow(this);
+      JSObject mJsroot = JSObjectBridge.getWindow(this);
       mJsroot.eval("loadComplete()");
 
    }

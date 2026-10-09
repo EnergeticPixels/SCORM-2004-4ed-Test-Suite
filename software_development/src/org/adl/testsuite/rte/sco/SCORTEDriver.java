@@ -24,6 +24,7 @@ import org.adl.testsuite.util.TestSubjectData;
 import org.adl.util.LogMessage;
 import org.adl.util.MessageType;
 import org.adl.util.Messages;
+import org.adl.util.JSObjectBridge;
 import org.adl.util.debug.LogConfig;
 
 /**
@@ -110,7 +111,7 @@ public class SCORTEDriver extends Applet
    public void init()
    {      
       // Initialize the JavaScript comm link
-      mJsroot = JSObject.getWindow(this);
+      mJsroot = JSObjectBridge.getWindow(this);
 
       // Configure debug logging
       mLogger = Logger.getLogger("org.adl.util.debug.testsuite");
@@ -139,7 +140,7 @@ public class SCORTEDriver extends Applet
       {
          // loops until the applets load to make the continue button visible
       }
-      JSObject.getWindow(this);
+      JSObjectBridge.getWindow(this);
       mJsroot.eval("loadComplete()");
    }
 

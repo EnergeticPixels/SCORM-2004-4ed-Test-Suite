@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 
 import netscape.javascript.JSObject;
 
+import org.adl.util.JSObjectBridge;
 import org.adl.testsuite.util.AppletList;
 import org.adl.testsuite.util.CTSEnvironmentVariable;
 import org.adl.testsuite.util.TestSubjectData;
@@ -58,7 +59,7 @@ public class LogManagerInterfaceApplet extends Applet
       AppletList.register("logInterface",this);
       mSupportVerifier.verifyEnvironmentVariable(CTSEnvironmentVariable.CTS_ENV);
       
-      mJsroot = JSObject.getWindow(this);
+      mJsroot = JSObjectBridge.getWindow(this);
    }
    
    /**

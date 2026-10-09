@@ -45,6 +45,11 @@ Operator: energ + Copilot
 - Result: Compile phase passed; build advanced to signing.
 - Failure: `jarsigner: you must enter key password` in `signJar` target.
 
+1. Attempt D
+- Context: USB-backed PKCS12 keystore configured via external Ant property file and corrected session environment values.
+- Result: Success.
+- Notes: Full `ant` run completed including jar signing stages and final `BUILD SUCCESSFUL` output.
+
 ### In-Repo Fixes Applied During Bootstrap
 - Permanent fix: [software_development/src/org/adl/util/debug/ADLSimpleFormatter.java](../software_development/src/org/adl/util/debug/ADLSimpleFormatter.java)
 - Replaced internal `sun.security.action.GetPropertyAction` usage with `System.getProperty("line.separator")`.
@@ -52,15 +57,17 @@ Operator: energ + Copilot
 - Temporary workaround: [software_development/buildDebug.xml](../software_development/buildDebug.xml)
 - Added compiler argument `--add-exports=java.base/sun.security.action=ALL-UNNAMED` for legacy compatibility during Phase 1 baseline work.
 
+- Compatibility bridge: [software_development/src/org/adl/util/JSObjectBridge.java](../software_development/src/org/adl/util/JSObjectBridge.java)
+- Replaced direct `JSObject.getWindow(...)` calls in legacy applet classes with reflection-backed bridge calls to support modern JDK compilation.
+
+- Classpath fix: [software_development/buildAdlValidator.xml](../software_development/buildAdlValidator.xml)
+- Added missing Xerces/XML parser jars to the first parser compile classpath.
+
 ### Current Classification
-- Build classification: Class B progressing toward readiness.
-- Current gate: Signing credentials not configured in [software_development/build.properties](../software_development/build.properties).
+- Build classification: Class B build-ready.
+- Current gate: None for baseline build/sign flow when using external USB-backed signing properties.
 - Runtime classification: Pending browser/applet flow validation.
 
 ### Next Actions
-1. Decide signing strategy for Phase 1 baseline:
-1. Configure real keystore values.
-1. Or create an unsigned baseline lane if allowed by governance for non-release evidence.
-
-1. Re-run `ant` after signing decision and capture outcome.
 1. Proceed to runtime flow checks for LMS, SCO, Content Package, and Manifest groups.
+1. Capture runtime evidence into the P1-07 schema folders and index CSV.

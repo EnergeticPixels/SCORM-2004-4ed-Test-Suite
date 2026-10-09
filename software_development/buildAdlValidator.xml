@@ -13,6 +13,10 @@
                 <pathelement location="${lib}/saxon8.jar"/>
                 <pathelement location="${lib}/jdom.jar"/>                
                 <pathelement location="${lib}/jaxen-1.1.1.jar"/>                
+                <pathelement location="${lib}/xercesImpl.jar"/>
+                <pathelement location="${lib}/xml-apis.jar"/>
+                <pathelement location="${lib}/xmlParserAPIs.jar"/>
+                <pathelement location="${lib}/xalan.jar"/>
                 <pathelement location="${lib}/util.jar"/>
                 <pathelement location="${buildDir}/util.jar"/>
             </classpath>

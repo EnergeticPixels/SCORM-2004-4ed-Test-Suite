@@ -19,6 +19,7 @@ import org.adl.testsuite.rte.lms.util.LMSMessages;
 import org.adl.testsuite.util.AppletList;
 import org.adl.testsuite.util.CTSEnvironmentVariable;
 import org.adl.testsuite.util.TestSubjectData;
+import org.adl.util.JSObjectBridge;
 import org.adl.util.MessageType;
 import org.adl.util.Messages;
 import org.adl.util.debug.LogConfig;
@@ -92,7 +93,7 @@ public class LMSTestApplet extends Applet
       final LogConfig myLogConfig = new LogConfig();
       myLogConfig.configure( TS_HOME, false );
       
-      mJsroot = JSObject.getWindow(this);
+      mJsroot = JSObjectBridge.getWindow(this);
     
       AppletList.register(getClass().getSimpleName(),this); 
             
@@ -126,7 +127,6 @@ public class LMSTestApplet extends Applet
    {
       mDriver.startNewTest();
    }
-   
    /**
     * used to load logs that have already been created from a previously saved
     * test
