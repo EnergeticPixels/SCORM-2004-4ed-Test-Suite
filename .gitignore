@@ -1,6 +1,17 @@
 # Local build output
 software_development/build/
 
+# Generated signed jars from local build (not source-controlled)
+software_development/lib/ContentPackageTest.jar
+software_development/lib/LMSTest.jar
+software_development/lib/SCOTest.jar
+software_development/lib/adlvalidator.jar
+software_development/lib/checksum.jar
+software_development/lib/cmidatamodel.jar
+software_development/lib/debug.jar
+software_development/lib/testsuiteutil.jar
+software_development/lib/util.jar
+
 # Java signing material (do not commit)
 *.jks
 *.keystore
