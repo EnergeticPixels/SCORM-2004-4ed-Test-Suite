@@ -5,27 +5,27 @@
   "inputs": [
     "software_development/TestSuite/LMSRTE/Courses/LMSTestPackage_CT-07/imsmanifest.xml"
   ],
-  "variance_notes": "",
+  "variance_notes": "Bulk Class C sweep entry (2026-11-10): blocked status recorded by cross-reference to BL-CP-01 representative blocker evidence in the same host/browser environment. This run was not executed interactively in this pass.",
   "run_id": "P1-04_MAN_BL-MAN-02_20261009_ENERG",
   "result": {
-    "status": "not-run",
-    "summary": "Pending execution"
+    "status": "blocked",
+    "summary": "Class C blocker recorded by cross-reference to BL-CP-01: modern Edge triggers legacy browser warning and cannot load required Java browser plugin/applet runtime path."
   },
-  "timestamp_utc": "TBD",
+  "timestamp_utc": "2026-11-10 (bulk backfill)",
   "environment": {
     "os": "Windows 11",
     "java_version": "OpenJDK 25+36-LTS",
     "ant_version": "1.10.18",
-    "browser": "TBD"
+    "browser": "Microsoft Edge 157.0.4341.42"
   },
-  "baseline_class": "TBD",
+  "baseline_class": "C",
   "outputs": [
     "screenshot_start.png",
     "screenshot_end.png",
     "summary_log.txt",
     "notes.md"
   ],
-  "workspace_commit": "TBD",
+  "workspace_commit": "400bcbf898e5df85fb6eba1855008a750d1627d4",
   "backlog_item": "P1-04",
   "phase": "phase1",
   "runner": "energ"

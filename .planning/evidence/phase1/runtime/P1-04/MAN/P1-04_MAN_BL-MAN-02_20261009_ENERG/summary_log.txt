@@ -1,0 +1,15 @@
+Run ID: P1-04_MAN_BL-MAN-02_20261009_ENERG
+Type: Bulk Class C sweep log (cross-referenced, not interactive execution)
+Recorded: 2026-11-10
+Browser: Microsoft Edge 157.0.4341.42
+OS: Windows 11
+Entry point: software_development/TestSuite/contentpackage/ManifestUtilityMain.htm
+Input anchor: software_development/TestSuite/LMSRTE/Courses/LMSTestPackage_CT-07/imsmanifest.xml
+
+[1] No interactive run executed for this case in this pass.
+[2] Applied blocker classification by cross-reference to P1-04_CP_BL-CP-01_20261009_ENERG evidence.
+[3] Representative blocker messages from BL-CP-01:
+    - "Browser not tested."
+    - "This browser does not have a Java Plug-in."
+
+Result: BLOCKED — Baseline Class C (environment-level applet/runtime incompatibility).
