@@ -1,0 +1,32 @@
+{
+  "entry_point": "software_development/TestSuite/contentpackage/ContentPackageMain.htm",
+  "group": "CP",
+  "case_id": "BL-CP-03",
+  "inputs": [
+    "Missing or invalid manifest path"
+  ],
+  "variance_notes": "",
+  "run_id": "P1-04_CP_BL-CP-03_20261009_ENERG",
+  "result": {
+    "status": "not-run",
+    "summary": "Pending execution"
+  },
+  "timestamp_utc": "TBD",
+  "environment": {
+    "os": "Windows 11",
+    "java_version": "OpenJDK 25+36-LTS",
+    "ant_version": "1.10.18",
+    "browser": "TBD"
+  },
+  "baseline_class": "TBD",
+  "outputs": [
+    "screenshot_start.png",
+    "screenshot_end.png",
+    "summary_log.txt",
+    "notes.md"
+  ],
+  "workspace_commit": "TBD",
+  "backlog_item": "P1-04",
+  "phase": "phase1",
+  "runner": "energ"
+}

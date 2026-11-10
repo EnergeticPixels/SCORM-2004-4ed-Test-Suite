@@ -1,0 +1,32 @@
+{
+  "entry_point": "software_development/TestSuite/scoRTE/SCORTEMain.htm",
+  "group": "SCO",
+  "case_id": "BL-SCO-02",
+  "inputs": [
+    "software_development/TestSuite/LMSRTE/Courses/SCODepot/SequencingTestFail.htm"
+  ],
+  "variance_notes": "",
+  "run_id": "P1-04_SCO_BL-SCO-02_20261009_ENERG",
+  "result": {
+    "status": "not-run",
+    "summary": "Pending execution"
+  },
+  "timestamp_utc": "TBD",
+  "environment": {
+    "os": "Windows 11",
+    "java_version": "OpenJDK 25+36-LTS",
+    "ant_version": "1.10.18",
+    "browser": "TBD"
+  },
+  "baseline_class": "TBD",
+  "outputs": [
+    "screenshot_start.png",
+    "screenshot_end.png",
+    "summary_log.txt",
+    "notes.md"
+  ],
+  "workspace_commit": "TBD",
+  "backlog_item": "P1-04",
+  "phase": "phase1",
+  "runner": "energ"
+}

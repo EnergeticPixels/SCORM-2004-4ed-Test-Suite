@@ -1,1 +1,2 @@
 run_id,backlog_item,group,case_id,date_utc,runner,baseline_class,result_status,evidence_path,notes_path
+P1-04_CP_BL-CP-01_20261009_ENERG,P1-04,CP,BL-CP-01,2026-10-09,energ,C,blocked,evidence/phase1/runtime/P1-04/CP/P1-04_CP_BL-CP-01_20261009_ENERG,evidence/phase1/runtime/P1-04/CP/P1-04_CP_BL-CP-01_20261009_ENERG/notes.md

@@ -1,0 +1,32 @@
+{
+  "entry_point": "software_development/TestSuite/contentpackage/ContentPackageMain.htm",
+  "group": "CP",
+  "case_id": "BL-CP-01",
+  "inputs": [
+    "software_development/TestSuite/LMSRTE/Courses/LMSTestPackage_CT-01/imsmanifest.xml"
+  ],
+  "variance_notes": "Launched via top-level entry point software_development/TestSuite/main.htm, then followed the Content Package Conformance Test link. Modern Edge has no Java browser plugin model, so the applet-driven workflow cannot start. Exact attempt time not captured; documentation backfilled 2026-11-10 from session record.",
+  "run_id": "P1-04_CP_BL-CP-01_20261009_ENERG",
+  "result": {
+    "status": "blocked",
+    "summary": "Entry point loaded and displayed, but legacy browser check fired ('not meant for this browser') and no Java runtime is associated with the browser. Applet workflow could not start. Baseline Class C blocker."
+  },
+  "timestamp_utc": "2026-10-09 (approximate)",
+  "environment": {
+    "os": "Windows 11",
+    "java_version": "OpenJDK 25+36-LTS",
+    "ant_version": "1.10.18",
+    "browser": "Microsoft Edge 157.0.4341.42"
+  },
+  "baseline_class": "C",
+  "outputs": [
+    "screenshot_start.png",
+    "screenshot_end.png",
+    "summary_log.txt",
+    "notes.md"
+  ],
+  "workspace_commit": "94ea94cb505568c38fc1720a35cff43afcca1a70",
+  "backlog_item": "P1-04",
+  "phase": "phase1",
+  "runner": "energ"
+}
