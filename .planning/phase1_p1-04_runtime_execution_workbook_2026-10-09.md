@@ -65,6 +65,19 @@ Execute baseline runtime flows and capture evidence for each matrix case into pr
 - [ ] Determine resulting baseline class for BL-CP-01 (A/B/C) and document rationale.
 - [ ] If BL-CP-01 succeeds in Class A/B, rerun BL-LMS-01, BL-SCO-01, and BL-MAN-01 next to begin replacing bulk-marked Class C entries.
 
+### Legacy Pilot Session Record (Fill In)
+- Pilot date (UTC): `TBD`
+- Pilot runner: `energ`
+- Runtime source/provenance: `TBD`
+- Host/VM details: `TBD`
+- OS version/build: `TBD`
+- Browser product/version: `TBD`
+- JRE/JDK product/version: `TBD`
+- BL-CP-01 outcome: `TBD` (pass/fail/blocked)
+- Baseline class result: `TBD` (A/B/C)
+- Decision after pilot: `TBD` (promote to LMS/SCO/MAN reruns or remain provisional C)
+- Notes: `TBD`
+
 ### Notes
 - 2026-11-10: Fast Class C sweep performed for remaining cases by cross-reference to BL-CP-01 blocker evidence. Entries are documented as bulk-marked and require per-case rerun once legacy-capable runtime is available.
 - Self-signed jar warnings in build output are expected for local baseline signing.
