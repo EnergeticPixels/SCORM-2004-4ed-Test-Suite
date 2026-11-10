@@ -1,8 +1,8 @@
 ## Phase 1 P1-01 Baseline Test Matrix (v1)
 
 Status: Proposed (ready for QA + SME + TL approval)
-Version: 1.2
-Last Updated: 2026-10-08
+Version: 1.3
+Last Updated: 2026-11-10
 Backlog Item: P1-01
 Source backlog: [phase1_sprint-planning_backlog.md](phase1_sprint-planning_backlog.md)
 Source roadmap: [plan_modernization_firstblush.md](plan_modernization_firstblush.md)
@@ -44,6 +44,12 @@ Define a representative, repeatable baseline matrix across LMS, SCO, Content Pac
 1. Class A (Historical): Environment includes known-good IE-era runtime matching archival assumptions.
 1. Class B (Equivalent): Environment differs from archival assumptions but successfully runs required flows with documented Java/browser variance.
 1. Class C (Provisional): Partial execution only; gaps (for example applet/runtime incompatibility) prevent full baseline parity and must be called out as blockers.
+
+### Execution Decision Update (2026-11-10)
+1. A fast P1-04 sweep has been completed in the current host environment (Windows 11 + Microsoft Edge 157) and recorded as Class C blockers.
+1. Decision: treat current Phase 1 runtime capture as provisional Class C baseline, pending legacy-capable reruns.
+1. Conversion target for first rerun: BL-CP-01 evidence set (`P1-04_CP_BL-CP-01_20261009_ENERG`) to validate whether Class A/B execution is achievable.
+1. If legacy-capable runtime is confirmed, rerun high-priority LMS/SCO/MAN cases to replace cross-referenced Class C entries with case-specific Class A/B evidence.
 
 ### Matrix Selection Rules
 1. Include all four required flow groups: LMS, SCO, Content Package, Manifest.
@@ -98,3 +104,4 @@ Define a representative, repeatable baseline matrix across LMS, SCO, Content Pac
 - v1.0 (2026-10-08): Initial baseline matrix for P1-01 with runnable flow anchors and evidence IDs.
 - v1.1 (2026-10-08): Replaced hard IE8 prerequisite with legacy runtime acquisition order and baseline classification model.
 - v1.2 (2026-10-08): Added Java availability constraint and OpenJDK 25 fallback decision guidance for baseline classification.
+- v1.3 (2026-11-10): Added execution decision update after P1-04 Class C sweep and defined legacy pilot rerun target.
