@@ -58,28 +58,29 @@ Execute baseline runtime flows and capture evidence for each matrix case into pr
 - [X] BL-CHK-01 completed — bulk-marked 2026-11-10 as **blocked** (Baseline Class C, cross-referenced to BL-CP-01 environment blocker evidence; no per-case interactive execution in this pass).
 
 ### Legacy Pilot Checklist (Next Session)
-- [ ] Confirm legacy-capable runtime source per P1-01 acquisition order (internal VM snapshot, offline media, or nearest applet-capable fallback) and record provenance.
-- [ ] Record environment metadata before rerun: OS build, browser version, JRE/JDK version, and source/provenance.
+- [X] Confirm legacy-capable runtime source per P1-01 acquisition order (internal VM snapshot, offline media, or nearest applet-capable fallback) and record provenance.
+- [X] Record environment metadata before rerun: OS build, browser version, JRE/JDK version, and source/provenance.
 - [ ] Re-run BL-CP-01 in the legacy-capable environment and replace provisional blocker evidence with case-specific runtime evidence.
 - [ ] Capture required artifacts in `P1-04_CP_BL-CP-01_20261009_ENERG`: `screenshot_start.png`, `screenshot_end.png`, `summary_log.txt`, updated `metadata.json`, updated `notes.md`.
 - [ ] Determine resulting baseline class for BL-CP-01 (A/B/C) and document rationale.
 - [ ] If BL-CP-01 succeeds in Class A/B, rerun BL-LMS-01, BL-SCO-01, and BL-MAN-01 next to begin replacing bulk-marked Class C entries.
 
 ### Legacy Pilot Session Record (Fill In)
-- Pilot date (UTC): `TBD`
+- Pilot date (UTC): `2026-11-11T19:32:48Z`
 - Pilot runner: `energ`
-- Runtime source/provenance: `TBD`
-- Host/VM details: `TBD`
-- OS version/build: `TBD`
-- Browser product/version: `TBD`
-- JRE/JDK product/version: `TBD`
-- BL-CP-01 outcome: `TBD` (pass/fail/blocked)
-- Baseline class result: `TBD` (A/B/C)
-- Decision after pilot: `TBD` (promote to LMS/SCO/MAN reruns or remain provisional C)
-- Notes: `TBD`
+- Runtime source/provenance: `VirtualBox guest setup attempt (Windows 7 SP1 path) investigated; no usable legacy IE + Java plugin combination could be established due retired/blocked vendor distribution and support paths.`
+- Host/VM details: `Host: Windows 11 Pro 23H2; Guest target: Windows 7 SP1 (VirtualBox 7.0), not brought to runnable legacy applet state`
+- OS version/build: `Host Windows 11 Pro 23H2; legacy guest runtime not validated`
+- Browser product/version: `N/A for pilot rerun (legacy-capable browser not successfully provisioned); host browser Microsoft Edge 157`
+- JRE/JDK product/version: `N/A for legacy browser plugin runtime (not successfully provisioned)`
+- BL-CP-01 outcome: `blocked` (pass/fail/blocked)
+- Baseline class result: `C` (A/B/C)
+- Decision after pilot: `remain provisional C` (promote to LMS/SCO/MAN reruns or remain provisional C)
+- Notes: `Pilot blocked at environment provisioning stage; no interactive BL-CP-01 legacy rerun executed. Keep existing Class C evidence set and revisit only if a sanctioned internal legacy image becomes available.`
 
 ### Notes
 - 2026-11-10: Fast Class C sweep performed for remaining cases by cross-reference to BL-CP-01 blocker evidence. Entries are documented as bulk-marked and require per-case rerun once legacy-capable runtime is available.
+- 2026-11-11: Legacy pilot provisioning investigation concluded no usable legacy IE + Java plugin environment is currently achievable on available setup path; BL-CP-01 rerun remains blocked and Phase 1 stays provisional Class C.
 - Self-signed jar warnings in build output are expected for local baseline signing.
 - Use baseline class labels (A/B/C) from P1-01 in each run metadata.
 - 2026-11-10: BL-CP-01 attempt confirmed modern Edge cannot load the Java applet plugin; expect the same Class C blocker on all applet-driven cases until a legacy-capable environment is available (see P1-01 acquisition order).

@@ -1,8 +1,8 @@
 ## Phase 1 P1-01 Baseline Test Matrix (v1)
 
 Status: Proposed (ready for QA + SME + TL approval)
-Version: 1.3
-Last Updated: 2026-11-10
+Version: 1.4
+Last Updated: 2026-11-11
 Backlog Item: P1-01
 Source backlog: [phase1_sprint-planning_backlog.md](phase1_sprint-planning_backlog.md)
 Source roadmap: [plan_modernization_firstblush.md](plan_modernization_firstblush.md)
@@ -50,6 +50,11 @@ Define a representative, repeatable baseline matrix across LMS, SCO, Content Pac
 1. Decision: treat current Phase 1 runtime capture as provisional Class C baseline, pending legacy-capable reruns.
 1. Conversion target for first rerun: BL-CP-01 evidence set (`P1-04_CP_BL-CP-01_20261009_ENERG`) to validate whether Class A/B execution is achievable.
 1. If legacy-capable runtime is confirmed, rerun high-priority LMS/SCO/MAN cases to replace cross-referenced Class C entries with case-specific Class A/B evidence.
+
+### Execution Decision Update (2026-11-11)
+1. Legacy pilot provisioning attempt was investigated and blocked: no usable legacy IE + Java plugin runtime could be established on currently available setup path.
+1. Decision: keep Phase 1 baseline status at provisional Class C using existing P1-04 evidence set.
+1. Trigger to reopen legacy rerun track: availability of a sanctioned internal legacy image/runtime that can execute the applet-driven flows.
 
 ### Matrix Selection Rules
 1. Include all four required flow groups: LMS, SCO, Content Package, Manifest.
@@ -105,3 +110,4 @@ Define a representative, repeatable baseline matrix across LMS, SCO, Content Pac
 - v1.1 (2026-10-08): Replaced hard IE8 prerequisite with legacy runtime acquisition order and baseline classification model.
 - v1.2 (2026-10-08): Added Java availability constraint and OpenJDK 25 fallback decision guidance for baseline classification.
 - v1.3 (2026-11-10): Added execution decision update after P1-04 Class C sweep and defined legacy pilot rerun target.
+- v1.4 (2026-11-11): Recorded blocked legacy pilot provisioning outcome and confirmed continued provisional Class C decision.
