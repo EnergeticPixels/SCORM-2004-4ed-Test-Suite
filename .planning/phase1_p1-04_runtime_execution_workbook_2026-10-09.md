@@ -79,11 +79,14 @@ Execute baseline runtime flows and capture evidence for each matrix case into pr
 - Notes: `Pilot blocked at environment provisioning stage; no interactive BL-CP-01 legacy rerun executed. Keep existing Class C evidence set and revisit only if a sanctioned internal legacy image becomes available.`
 
 ### Notes
-- 2026-11-10: Fast Class C sweep performed for remaining cases by cross-reference to BL-CP-01 blocker evidence. Entries are documented as bulk-marked and require per-case rerun once legacy-capable runtime is available.
-- 2026-11-11: Legacy pilot provisioning investigation concluded no usable legacy IE + Java plugin environment is currently achievable on available setup path; BL-CP-01 rerun remains blocked and Phase 1 stays provisional Class C.
-- Self-signed jar warnings in build output are expected for local baseline signing.
-- Use baseline class labels (A/B/C) from P1-01 in each run metadata.
-- 2026-11-10: BL-CP-01 attempt confirmed modern Edge cannot load the Java applet plugin; expect the same Class C blocker on all applet-driven cases until a legacy-capable environment is available (see P1-01 acquisition order).
+- Isolation retest (2026-11-12): Rebuilt Win7 SP1 + IE11 VM from same Vagrant source and repeated Java/runtime matrix.
+- Java 6u45 active: SCORM 2004 3rd Edition CTS runs and verifies known 3rd Edition SCO successfully.
+- Java 8u202 active (Java 6 disabled): SCORM 2004 3rd Edition CTS still runs after Java security warnings.
+- SCORM 2004 4th Edition CTS: blocked by Java Security with Java 6u45 active.
+- SCORM 2004 4th Edition CTS: blocked by Java Security with Java 8u202 active.
+- Conclusion: environment/plugin path is functional; blocker appears specific to 4th Edition package trust/signing behavior, not general IE/Java setup.
+- Next step (planned): copy repo source from [software_development/](C:/Users/energ/Desktop/SCORM_CTS/software_development/) into Win7 and compare behavior against ADL installer source.
+- Source comparison retest: replaced ADL-installed 4th Edition payload with extracted repo [software_development/](C:/Users/energ/Desktop/SCORM_CTS/software_development/) content in the same install path; Java Security block persisted unchanged.
 
 
 
